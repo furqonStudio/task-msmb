@@ -1,13 +1,9 @@
 import { Tabs } from 'expo-router'
 import React from 'react'
-import { Platform, Text, TouchableOpacity, View } from 'react-native'
-
-import { HapticTab } from '@/components/HapticTab'
-import { IconSymbol } from '@/components/ui/IconSymbol'
-import TabBarBackground from '@/components/ui/TabBarBackground'
+import { Text, View } from 'react-native'
 import { Colors } from '@/constants/Colors'
 import { useColorScheme } from '@/hooks/useColorScheme'
-import CustomTabBar from '@/components/molecules/CustomTabBar'
+
 import HomeIcon from '@/assets/icons/HomeIcon'
 import ReportIcon from '@/assets/icons/ReportIcon'
 import AnalyzeIcon from '@/assets/icons/AnalyzeIcon'
@@ -23,8 +19,6 @@ export default function TabLayout() {
         tabBarShowLabel: false,
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
         tabBarStyle: {
           position: 'absolute',
           bottom: 12,
@@ -40,10 +34,18 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => (
-            <View className="items-center gap-1">
-              <HomeIcon />
-              <Text className="font-semibold text-[10px]">Home</Text>
+          tabBarIcon: ({ focused }) => (
+            <View
+              className="items-center gap-1"
+              style={{ opacity: focused ? 1 : 0.6 }}
+            >
+              <HomeIcon color={focused ? 'white' : '#D3D3D3'} />
+              <Text
+                className="font-semibold text-[10px]"
+                style={{ color: focused ? 'white' : '#D3D3D3' }}
+              >
+                Home
+              </Text>
             </View>
           ),
         }}
@@ -52,10 +54,22 @@ export default function TabLayout() {
         name="reports"
         options={{
           title: 'Reports',
-          tabBarIcon: ({ color }) => (
-            <View className="items-center w-[120%] -mt-[0.5px]">
-              <ReportIcon width={26} height={26} />
-              <Text className="font-semibold text-[10px]">Reports</Text>
+          tabBarIcon: ({ focused }) => (
+            <View
+              className="items-center w-[120%]"
+              style={{ opacity: focused ? 1 : 0.6 }}
+            >
+              <ReportIcon
+                color={focused ? 'white' : '#D3D3D3'}
+                width={24}
+                height={24}
+              />
+              <Text
+                className="font-semibold text-[10px]"
+                style={{ color: focused ? 'white' : '#D3D3D3' }}
+              >
+                Reports
+              </Text>
             </View>
           ),
         }}
@@ -65,9 +79,14 @@ export default function TabLayout() {
         options={{
           title: 'Analyze',
           tabBarIcon: ({ focused }) => (
-            <View className="size-[74px] flex justify-center items-center bg-[#FC754D] rounded-full border-4 border-white">
-              <AnalyzeIcon />
-              <Text className="font-semibold text-[10px]">Analyze</Text>
+            <View className="size-[80px] flex justify-center items-center bg-[#FC754D] rounded-full border-4 border-white">
+              <AnalyzeIcon color={focused ? 'white' : '#D3D3D3'} />
+              <Text
+                className="font-semibold text-[10px]"
+                style={{ color: focused ? 'white' : '#D3D3D3' }}
+              >
+                Analyze
+              </Text>
             </View>
           ),
         }}
@@ -76,10 +95,18 @@ export default function TabLayout() {
         name="clients"
         options={{
           title: 'Clients',
-          tabBarIcon: ({ color }) => (
-            <View className="items-center gap-1">
-              <ClientsIcon />
-              <Text className="font-semibold text-[10px]">Clients</Text>
+          tabBarIcon: ({ focused }) => (
+            <View
+              className="items-center gap-1"
+              style={{ opacity: focused ? 1 : 0.6 }}
+            >
+              <ClientsIcon color={focused ? 'white' : '#D3D3D3'} />
+              <Text
+                className="font-semibold text-[10px]"
+                style={{ color: focused ? 'white' : '#D3D3D3' }}
+              >
+                Clients
+              </Text>
             </View>
           ),
         }}
@@ -88,10 +115,18 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => (
-            <View className="items-center gap-1">
-              <ProfileIcon />
-              <Text className="font-semibold text-[10px]">Profile</Text>
+          tabBarIcon: ({ focused }) => (
+            <View
+              className="items-center gap-1"
+              style={{ opacity: focused ? 1 : 0.6 }}
+            >
+              <ProfileIcon color={focused ? 'white' : '#D3D3D3'} />
+              <Text
+                className="font-semibold text-[10px]"
+                style={{ color: focused ? 'white' : '#D3D3D3' }}
+              >
+                Profile
+              </Text>
             </View>
           ),
         }}
