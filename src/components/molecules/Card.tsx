@@ -12,9 +12,8 @@ type CardProps = {
 
 export default function Card({ data }: CardProps) {
   return (
-    <View className="bg-white w-[151px] h-[144px] rounded-[14px] overflow-hidden">
-      {/* <Image source={{ uri: data.image }} className="w-full h-[80px]" /> */}
-      <CustomImage />
+    <View className="bg-white w-[151px] h-[144px] rounded-[14px] overflow-hidden shadow-md shadow-dark-gray mb-2">
+      <CustomImage source={data.image} />
       <View className="px-[10px] py-[6px]">
         <View className="mb-[6px]">
           <Text className="font-poppins-bold text-[12px]">{data.name}</Text>

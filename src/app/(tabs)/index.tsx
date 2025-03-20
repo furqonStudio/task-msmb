@@ -5,6 +5,7 @@ import WeatherCard from '@/components/molecules/WeatherCard'
 import SearchBar from '@/components/molecules/SearchBar'
 import HomeHeader from '@/components/molecules/HomeHeader'
 import { View } from 'react-native'
+import ReportSection from '@/components/organisms/ReportSection'
 
 const index = () => {
   return (
@@ -15,7 +16,7 @@ const index = () => {
       </View>
       <WeatherCard />
       <ClientSection />
-      <ClientSection />
+      <ReportSection />
     </SafeAreaView>
   )
 }

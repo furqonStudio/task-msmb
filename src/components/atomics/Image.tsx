@@ -1,6 +1,10 @@
 import { Image } from 'expo-image'
 
-export default function CustomImage() {
+type CustomImageProps = {
+  source: string
+}
+
+export default function CustomImage({ source }: CustomImageProps) {
   const blurhash =
     '|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj['
 
@@ -11,7 +15,7 @@ export default function CustomImage() {
         width: '100%',
         backgroundColor: '#0553',
       }}
-      source={require('assets/images/clients-1.png')}
+      source={source}
       placeholder={{ blurhash }}
       contentFit="cover"
       transition={1000}

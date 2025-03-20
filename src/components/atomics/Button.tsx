@@ -26,7 +26,7 @@ export default function Button({
     </LinearGradient>
   ) : (
     <View
-      className="py-1 w-16 rounded-lg flex justify-center items-center"
+      className="py-1 px-3 rounded-lg flex justify-center items-center"
       style={{ backgroundColor: bgColor }}
     >
       <Text className="text-white text-[9px] font-poppins-semibold">
