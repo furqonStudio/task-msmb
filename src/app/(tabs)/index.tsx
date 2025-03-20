@@ -48,7 +48,16 @@ const index = () => {
           <Text className="text-xs font-normal text-white">Thunderstorm</Text>
         </View>
       </View>
+      <Text className="text-base font-bold">Clients</Text>
       <CardList />
+      <View className="flex self-end">
+        <Button text="View All" />
+      </View>
+      <Text className="text-base font-bold">Reports</Text>
+      <CardList />
+      <View className="flex self-end">
+        <Button text="View All" />
+      </View>
     </SafeAreaView>
   )
 }

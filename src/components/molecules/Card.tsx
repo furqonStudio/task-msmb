@@ -28,7 +28,7 @@ export default function Card({ data }: CardProps) {
             <Text className="text-[9px]">{data.phone}</Text>
           </View>
         </View>
-        <View className="self-end">
+        <View className="flex self-end">
           <Button text="Detail" />
         </View>
       </View>
