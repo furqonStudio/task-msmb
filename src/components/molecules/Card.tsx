@@ -1,18 +1,32 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 import Button from '../atomics/Button'
-import { Image } from 'expo-image'
+import LocationIcon from '@/assets/icons/LocationIcon'
+import PhoneIcon from '@/assets/icons/PhoneIcon'
 import CustomImage from '../atomics/Image'
+import { CardItem } from '@/type/type'
 
-export default function Card() {
+type CardProps = {
+  data: CardItem
+}
+
+export default function Card({ data }: CardProps) {
   return (
     <View className="bg-white w-[151px] h-[144px] rounded-[14px] overflow-hidden">
+      {/* <Image source={{ uri: data.image }} className="w-full h-[80px]" /> */}
       <CustomImage />
-      <View className="p-3">
-        <View className="mb-2">
-          <Text className="text-[9px]">Agus Hidayat</Text>
-          <Text className="text-[9px]">Yogyakarta, Indonesia</Text>
-          <Text className="text-[9px]">0909-909-9090</Text>
+      <View className="px-[10px] py-[6px]">
+        <View className="mb-[6px]">
+          <Text className="text-[12px] font-bold">{data.name}</Text>
+
+          <View className="flex flex-row items-center gap-1">
+            <LocationIcon />
+            <Text className="text-[9px]">{data.location}</Text>
+          </View>
+          <View className="flex flex-row items-center gap-1">
+            <PhoneIcon />
+            <Text className="text-[9px]">{data.phone}</Text>
+          </View>
         </View>
         <View className="self-end">
           <Button text="Detail" />
