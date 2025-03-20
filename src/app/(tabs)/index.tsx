@@ -10,7 +10,7 @@ import ReportSection from '@/components/organisms/ReportSection'
 
 const HomePage = () => {
   return (
-    <SafeAreaView className="flex-1 bg-[#F9FBF8] px-5">
+    <SafeAreaView className="container-style">
       <ScrollView
         className="flex-1"
         contentContainerStyle={{ gap: 12, paddingBottom: 100 }}

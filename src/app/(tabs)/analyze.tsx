@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function AnalyzePage() {
   return (
-    <View>
-      <Text>AnalyzePage</Text>
+    <View className="flex justify-center items-center flex-1">
+      <Text>Analyze Page</Text>
     </View>
   )
 }
