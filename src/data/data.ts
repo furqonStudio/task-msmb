@@ -1,6 +1,6 @@
 import { CardItem, ReportCardItem } from '@/type/type'
 
-export const dataList: CardItem[] = [
+export const clientCardData: CardItem[] = [
   {
     id: 1,
     name: 'Agus Hidayat',

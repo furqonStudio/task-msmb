@@ -1,12 +1,12 @@
 import { FlatList } from 'react-native'
 import React from 'react'
 import Card from './Card'
-import { dataList } from '@/data/data'
+import { clientCardData } from '@/data/data'
 
 export default function CardList() {
   return (
     <FlatList
-      data={dataList}
+      data={clientCardData}
       horizontal
       showsHorizontalScrollIndicator={false}
       keyExtractor={(item) => item.id.toString()}
