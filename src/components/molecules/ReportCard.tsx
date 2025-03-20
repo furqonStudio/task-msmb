@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import CustomImage from '../atomics/Image'
 import HouseIcon from '@/assets/icons/HouseIcon'
@@ -14,7 +14,7 @@ type ReportCardProps = {
 
 export default function ReportCard({ data }: ReportCardProps) {
   return (
-    <View
+    <TouchableOpacity
       className="bg-white w-[151px] rounded-[14px] overflow-hidden shadow-md shadow-dark-gray mb-2"
       style={{ height: 170 }}
     >
@@ -60,6 +60,6 @@ export default function ReportCard({ data }: ReportCardProps) {
           <Button text="View Report" />
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }

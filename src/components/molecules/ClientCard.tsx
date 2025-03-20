@@ -1,18 +1,18 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Button from '../atomics/Button'
 import LocationIcon from '@/assets/icons/LocationIcon'
 import PhoneIcon from '@/assets/icons/PhoneIcon'
 import CustomImage from '../atomics/Image'
-import { CardItem } from '@/type/type'
+import { ClientCardItem } from '@/type/type'
 
-type CardProps = {
-  data: CardItem
+type ClientCardProps = {
+  data: ClientCardItem
 }
 
-export default function Card({ data }: CardProps) {
+export default function ClientCard({ data }: ClientCardProps) {
   return (
-    <View className="bg-white w-[151px] h-[144px] rounded-[14px] overflow-hidden shadow-md shadow-dark-gray mb-2">
+    <TouchableOpacity className="bg-white w-[151px] h-[144px] rounded-[14px] overflow-hidden shadow-md shadow-dark-gray mb-2">
       <CustomImage source={data.image} />
       <View className="px-[10px] py-[6px]">
         <View className="mb-[6px]">
@@ -32,6 +32,6 @@ export default function Card({ data }: CardProps) {
           <Button text="Detail" />
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }

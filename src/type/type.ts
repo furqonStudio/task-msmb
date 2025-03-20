@@ -1,4 +1,4 @@
-export type CardItem = {
+export type ClientCardItem = {
   id: number
   name: string
   location: string

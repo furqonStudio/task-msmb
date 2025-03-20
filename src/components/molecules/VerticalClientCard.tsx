@@ -1,18 +1,18 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { CardItem } from '@/type/type'
 import CustomImage from '../atomics/Image'
 import LocationIcon from '@/assets/icons/LocationIcon'
 import PhoneIcon from '@/assets/icons/PhoneIcon'
 import Button from '../atomics/Button'
+import { ClientCardItem } from '@/type/type'
 
-type CardProps = {
-  data: CardItem
+type ClientCardProps = {
+  data: ClientCardItem
 }
 
-export default function VerticalClientCard({ data }: CardProps) {
+export default function VerticalClientCard({ data }: ClientCardProps) {
   return (
-    <View className="flex-row items-center gap-4 bg-white rounded-2xl p-2 overflow-hidden shadow-md shadow-dark-gray mb-2">
+    <TouchableOpacity className="flex-row items-center gap-4 bg-white rounded-2xl p-2 overflow-hidden shadow-md shadow-dark-gray mb-2">
       <View className="w-44 h-32 rounded-xl overflow-hidden">
         <CustomImage source={data.image} />
       </View>
@@ -34,6 +34,6 @@ export default function VerticalClientCard({ data }: CardProps) {
           <Button text="Detail" />
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }

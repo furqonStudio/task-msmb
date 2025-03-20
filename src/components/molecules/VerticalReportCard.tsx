@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import CustomImage from '../atomics/Image'
 import HouseIcon from '@/assets/icons/HouseIcon'
@@ -15,7 +15,7 @@ type ReportCardProps = {
 
 export default function VerticalReportCard({ data }: ReportCardProps) {
   return (
-    <View className="flex-row items-center gap-4 bg-white rounded-2xl p-2 overflow-hidden shadow-md shadow-dark-gray mb-2">
+    <TouchableOpacity className="flex-row items-center gap-4 bg-white rounded-2xl p-2 overflow-hidden shadow-md shadow-dark-gray mb-2">
       <View className="w-44 rounded-xl overflow-hidden">
         <CustomImage source={data.image} />
         <View className="flex-row absolute">
@@ -59,6 +59,6 @@ export default function VerticalReportCard({ data }: ReportCardProps) {
           <Button text="View Report" />
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }

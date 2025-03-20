@@ -1,7 +1,7 @@
 import { FlatList } from 'react-native'
 import React from 'react'
-import Card from './Card'
 import { clientCardData } from '@/data/data'
+import ClientCard from './ClientCard'
 
 export default function CardList() {
   return (
@@ -10,7 +10,7 @@ export default function CardList() {
       horizontal
       showsHorizontalScrollIndicator={false}
       keyExtractor={(item) => item.id.toString()}
-      renderItem={({ item }) => <Card data={item} />}
+      renderItem={({ item }) => <ClientCard data={item} />}
       contentContainerStyle={{ gap: 10 }}
     />
   )
