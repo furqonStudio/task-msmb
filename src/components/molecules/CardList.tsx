@@ -1,6 +1,6 @@
 import { FlatList } from 'react-native'
 import React from 'react'
-import Card from '../molecules/Card'
+import Card from './Card'
 import { dataList } from '@/data/data'
 
 export default function CardList() {
