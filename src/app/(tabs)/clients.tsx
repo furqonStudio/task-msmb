@@ -3,7 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import ArrowLeftIcon from '@/assets/icons/ArrowLeftIcon'
 import { MaterialIcons } from '@expo/vector-icons'
-import VerticalClientCardList from '@/components/molecules/VerticalClientCardList'
+import VerticalClientCardList from '@/components/molecules/VerticalClientCardList copy'
 
 export default function clients() {
   return (
