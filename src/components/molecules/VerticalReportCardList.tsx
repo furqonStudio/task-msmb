@@ -11,6 +11,7 @@ export default function VerticalReportCardList() {
       keyExtractor={(item) => item.id.toString()}
       renderItem={({ item }) => <VerticalReportCard data={item} />}
       contentContainerStyle={{ gap: 10 }}
+      nestedScrollEnabled
     />
   )
 }

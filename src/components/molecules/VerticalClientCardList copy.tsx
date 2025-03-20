@@ -11,6 +11,7 @@ export default function VerticalClientCardList() {
       keyExtractor={(item) => item.id.toString()}
       renderItem={({ item }) => <VerticalClientCard data={item} />}
       contentContainerStyle={{ gap: 10 }}
+      nestedScrollEnabled
     />
   )
 }
