@@ -11,7 +11,7 @@ export default function CardList() {
       showsHorizontalScrollIndicator={false}
       keyExtractor={(item) => item.id.toString()}
       renderItem={({ item }) => <Card data={item} />}
-      contentContainerStyle={{ gap: 10, padding: 10 }}
+      contentContainerStyle={{ gap: 10 }}
     />
   )
 }

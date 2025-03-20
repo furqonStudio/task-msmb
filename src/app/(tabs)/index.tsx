@@ -13,8 +13,8 @@ const index = () => {
     <SafeAreaView className="mx-[18px]">
       <View className="flex flex-row justify-between items-center">
         <View>
-          <Text className="font-normal text-[12px] -mb-1">Good Morning</Text>
-          <Text className="font-bold text-[20px]">Demo Email</Text>
+          <Text className="font-poppins text-[12px] -mb-1">Good Morning</Text>
+          <Text className="font-poppins-bold text-[20px]">Demo Email</Text>
         </View>
         <View className="flex justify-center items-center relative size-[34px] bg-gray rounded-xl">
           <BellIcon color="black" />
@@ -30,12 +30,14 @@ const index = () => {
       </View>
       <View className="flex flex-row justify-between items-center bg-primary h-[129px] rounded-2xl px-8 py-3">
         <View>
-          <Text className="text-xs font-normal text-white">This Day</Text>
-          <Text className="text-xs font-bold text-white">
+          <Text className="text-xs font-poppins text-white">This Day</Text>
+          <Text className="text-xs font-poppins-bold text-white">
             Sunday, 13 December
           </Text>
-          <Text className="text-[50px] font-bold text-white -my-2">23°C</Text>
-          <Text className="text-xs font-normal text-white">
+          <Text className="text-[50px] font-poppins-bold text-white -my-2">
+            23°C
+          </Text>
+          <Text className="text-xs font-poppins text-white">
             Day 25°C, Night 25°C
           </Text>
         </View>
@@ -45,15 +47,15 @@ const index = () => {
             className="size-[70px] p-1"
             resizeMode="contain"
           />
-          <Text className="text-xs font-normal text-white">Thunderstorm</Text>
+          <Text className="text-xs font-poppins text-white">Thunderstorm</Text>
         </View>
       </View>
-      <Text className="text-base font-bold">Clients</Text>
+      <Text className="text-base font-poppins-bold">Clients</Text>
       <CardList />
-      <View className="flex self-end">
+      <View className="flex self-end mt-3">
         <Button text="View All" />
       </View>
-      <Text className="text-base font-bold">Reports</Text>
+      <Text className="text-base font-poppins-bold">Reports</Text>
       <CardList />
       <View className="flex self-end">
         <Button text="View All" />

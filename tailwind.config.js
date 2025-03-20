@@ -14,6 +14,11 @@ module.exports = {
         gray: '#F0F0F0',
         'dark-gray': '#A1A1A1',
       },
+      fontFamily: {
+        poppins: ['Poppins_Regular'],
+        'poppins-semibold': ['Poppins_Semi_Bold'],
+        'poppins-bold': ['Poppins_Bold'],
+      },
     },
   },
   plugins: [],

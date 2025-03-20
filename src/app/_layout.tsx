@@ -12,22 +12,30 @@ import 'react-native-reanimated'
 
 import { useColorScheme } from '@/hooks/useColorScheme'
 import '../../global.css'
+import {
+  Poppins_400Regular,
+  Poppins_600SemiBold,
+  Poppins_700Bold,
+} from '@expo-google-fonts/poppins'
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
   const colorScheme = useColorScheme()
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+
+  const [fontsLoaded] = useFonts({
+    Poppins_Regular: Poppins_400Regular,
+    Poppins_Semi_Bold: Poppins_600SemiBold,
+    Poppins_Bold: Poppins_700Bold,
   })
 
   useEffect(() => {
-    if (loaded) {
+    if (fontsLoaded) {
       SplashScreen.hideAsync()
     }
-  }, [loaded])
+  }, [fontsLoaded])
 
-  if (!loaded) {
+  if (!fontsLoaded) {
     return null
   }
 

@@ -17,15 +17,16 @@ export default function Card({ data }: CardProps) {
       <CustomImage />
       <View className="px-[10px] py-[6px]">
         <View className="mb-[6px]">
-          <Text className="text-[12px] font-bold">{data.name}</Text>
-
-          <View className="flex flex-row items-center gap-1">
-            <LocationIcon />
-            <Text className="text-[9px]">{data.location}</Text>
-          </View>
-          <View className="flex flex-row items-center gap-1">
-            <PhoneIcon />
-            <Text className="text-[9px]">{data.phone}</Text>
+          <Text className="font-poppins-bold text-[12px]">{data.name}</Text>
+          <View>
+            <View className="flex flex-row items-center gap-1">
+              <LocationIcon />
+              <Text className="font-poppins text-[10px]">{data.location}</Text>
+            </View>
+            <View className="flex flex-row items-center gap-1">
+              <PhoneIcon />
+              <Text className="font-poppins text-[10px] ">{data.phone}</Text>
+            </View>
           </View>
         </View>
         <View className="flex self-end">
