@@ -5,7 +5,7 @@ import ArrowLeftIcon from '@/assets/icons/ArrowLeftIcon'
 import { MaterialIcons } from '@expo/vector-icons'
 import VerticalReportCardList from '@/components/molecules/VerticalReportCardList'
 
-export default function reports() {
+export default function ReportsPage() {
   return (
     <SafeAreaView className="px-5 bg-[#F9FBF8]">
       <View className="flex-row">

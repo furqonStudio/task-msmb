@@ -7,7 +7,7 @@ import HomeHeader from '@/components/molecules/HomeHeader'
 import { View } from 'react-native'
 import ReportSection from '@/components/organisms/ReportSection'
 
-const index = () => {
+const HomePage = () => {
   return (
     <SafeAreaView className="px-5 flex-1 gap-3 bg-[#F9FBF8]">
       <View>
@@ -21,4 +21,4 @@ const index = () => {
   )
 }
 
-export default index
+export default HomePage

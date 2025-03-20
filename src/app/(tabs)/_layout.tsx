@@ -7,12 +7,14 @@ import { IconSymbol } from '@/components/ui/IconSymbol'
 import TabBarBackground from '@/components/ui/TabBarBackground'
 import { Colors } from '@/constants/Colors'
 import { useColorScheme } from '@/hooks/useColorScheme'
+import CustomTabBar from '@/components/molecules/CustomTabBar'
 
 export default function TabLayout() {
   const colorScheme = useColorScheme()
 
   return (
     <Tabs
+      tabBar={(props) => <CustomTabBar {...props} />}
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
