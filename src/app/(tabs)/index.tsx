@@ -5,6 +5,8 @@ import Button from '@/components/atomics/Button'
 import Card from '@/components/molecules/Card'
 import CardList from '@/components/organisms/CardList'
 import BellIcon from '@/assets/icons/BellIcon'
+import RoundedLocationIcon from '@/assets/icons/RoundedLocationIcon'
+import SortIcon from '@/assets/icons/SortIcon'
 
 const index = () => {
   return (
@@ -18,6 +20,13 @@ const index = () => {
           <BellIcon color="black" />
           <View className="absolute right-2 top-2 bg-[#FE564B] size-2 rounded-full border-[#e2e8f0] border" />
         </View>
+      </View>
+      <View className="flex flex-row items-center justify-between bg-gray py-[7px] px-2">
+        <View className="flex flex-row items-center gap-1">
+          <RoundedLocationIcon />
+          <Text className="text-xs">Your location ...</Text>
+        </View>
+        <SortIcon />
       </View>
       <CardList />
     </SafeAreaView>
