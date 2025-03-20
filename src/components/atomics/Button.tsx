@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Button({ text }: { text: string }) {
   return (
-    <View className="">
-      <Text>{text}</Text>
+    <View className="bg-primary py-1 w-16 rounded-lg flex justify-center items-center">
+      <Text className="text-white text-[9px]">{text}</Text>
     </View>
   )
 }
