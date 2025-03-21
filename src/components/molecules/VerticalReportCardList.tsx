@@ -12,6 +12,7 @@ export default function VerticalReportCardList() {
       renderItem={({ item }) => <VerticalReportCard data={item} />}
       contentContainerStyle={{ gap: 10 }}
       nestedScrollEnabled
+      scrollEnabled={false}
     />
   )
 }

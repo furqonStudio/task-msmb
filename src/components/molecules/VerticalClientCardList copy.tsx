@@ -12,6 +12,7 @@ export default function VerticalClientCardList() {
       renderItem={({ item }) => <VerticalClientCard data={item} />}
       contentContainerStyle={{ gap: 10 }}
       nestedScrollEnabled
+      scrollEnabled={false}
     />
   )
 }
