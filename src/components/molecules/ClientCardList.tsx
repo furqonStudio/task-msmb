@@ -3,7 +3,7 @@ import React from 'react'
 import { clientCardData } from '@/data/data'
 import ClientCard from './ClientCard'
 
-export default function CardList() {
+export default function ClientCardList() {
   return (
     <FlatList
       data={clientCardData}
